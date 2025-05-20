@@ -2,7 +2,7 @@
 
 I built this countdown timer using just HTML, CSS, and JavaScript - no frameworks or libraries. You can create countdowns for any event, pick different backgrounds, and share them with friends.
 
-**Live Demo:** [Check out the live site](https://your-netlify-url-here.netlify.app)
+**Live Demo:** [Check out the live site](https://event-countdowntimer.netlify.app/)
 
 ## Screenshots
 
