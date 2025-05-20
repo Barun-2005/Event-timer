@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#17181f">
+    <meta name="format-detection" content="telephone=no">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <meta name="description" content="Custom countdown timer for your special event.">
+</head>
+<body>
+    <div class="container">
+        <h1 id="event-title">Countdown to Your Event</h1>
+
+        <div id="countdown-container">
+            <div class="countdown">
+                <div class="time-wrapper">
+                    <div id="days-box" class="time-box">
+                        <!-- Flip card structure will be inserted by JS -->
+                    </div>
+                    <p class="label">Days</p>
+                </div>
+
+                <div class="time-wrapper">
+                    <div id="hours-box" class="time-box">
+                        <!-- Flip card structure will be inserted by JS -->
+                    </div>
+                    <p class="label">Hours</p>
+                </div>
+
+                <div class="time-wrapper">
+                    <div id="minutes-box" class="time-box">
+                        <!-- Flip card structure will be inserted by JS -->
+                    </div>
+                    <p class="label">Minutes</p>
+                </div>
+
+                <div class="time-wrapper">
+                    <div id="seconds-box" class="time-box">
+                        <!-- Flip card structure will be inserted by JS -->
+                    </div>
+                    <p class="label">Seconds</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="share-btn" class="btn share-btn">Share Countdown</button>
+                <button id="reset-btn" class="btn">Create New</button>
+            </div>
+        </div>
+
+        <!-- Share Modal -->
+        <div id="share-modal" class="modal">
+            <div class="modal-content">
+                <h2 class="modal-title">Share Your Countdown</h2>
+                <div class="share-link">
+                    <input type="text" id="share-link" readonly>
+                    <button id="copy-link" class="copy-btn">Copy</button>
+                </div>
+                <p>Share this link with friends so they can see your countdown!</p>
+                <button id="close-modal" class="close-modal">×</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mountains"></div>
+
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/icon-facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/icon-pinterest.svg" alt="Pinterest">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/icon-instagram.svg" alt="Instagram">
+        </a>
+    </div>
+
+    <!-- Audio for countdown completion -->
+    <audio id="completion-sound" preload="auto">
+        <source src="assets/sounds/complete.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/storage.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/countdown-page.js"></script>
+</body>
+</html>

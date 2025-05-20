@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Custom Countdown Creator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <meta name="description" content="Create custom countdown timers for any event. Share with friends and track multiple events.">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Create Your Countdown</h1>
+
+        <section id="input-section">
+            <form id="countdown-form">
+                <div class="form-group">
+                    <label for="event-name">Event Name</label>
+                    <input type="text" id="event-name" placeholder="Enter event name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-date">Event Date & Time</label>
+                    <input type="datetime-local" id="event-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Background Theme</label>
+                    <div class="background-options">
+                        <div class="bg-option selected" data-background="default" title="Default">
+                            <img src="assets/backgrounds/default-thumb.jpg" alt="Default theme">
+                        </div>
+                        <div class="bg-option" data-background="beach" title="Beach">
+                            <img src="assets/backgrounds/beach-thumb.jpg" alt="Beach theme">
+                        </div>
+                        <div class="bg-option" data-background="space" title="Space">
+                            <img src="assets/backgrounds/space-thumb.jpg" alt="Space theme">
+                        </div>
+                        <div class="bg-option" data-background="forest" title="Forest">
+                            <img src="assets/backgrounds/forest-thumb.jpg" alt="Forest theme">
+                        </div>
+                        <div class="bg-option" data-background="city" title="City">
+                            <img src="assets/backgrounds/city-thumb.jpg" alt="City theme">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Create Countdown</button>
+            </form>
+        </section>
+
+        <section id="history-section" class="hidden">
+            <h2 class="history-title">Your Countdowns</h2>
+            <div id="countdown-list" class="countdown-list">
+                <!-- Countdown cards will be inserted here -->
+            </div>
+        </section>
+    </div>
+
+    <div class="mountains"></div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

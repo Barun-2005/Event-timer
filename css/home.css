@@ -1,0 +1,322 @@
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styles */
+#input-section {
+    background-color: hsla(240, 21%, 22%, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+    border: 1px solid hsla(237, 18%, 59%, 0.2);
+    animation: fadeIn 0.8s ease;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid hsla(237, 18%, 59%, 0.3);
+    background-color: hsla(236, 21%, 26%, 0.7);
+    color: var(--white);
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* Background selection */
+.background-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.bg-option {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.bg-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-option.selected {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 87, 123, 0.5);
+}
+
+/* Countdown history section */
+#history-section {
+    margin-top: 50px;
+    animation: fadeIn 1s ease 0.3s;
+    animation-fill-mode: both;
+}
+
+.history-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.countdown-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.countdown-card {
+    background-color: hsla(236, 21%, 26%, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid transparent;
+    z-index: 6;
+}
+
+.countdown-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background-color: hsla(236, 21%, 28%, 0.9);
+}
+
+/* Card status indicators */
+.countdown-card.expired {
+    border-left-color: #888;
+    opacity: 0.8;
+}
+
+.countdown-card.ending-soon {
+    border-left-color: var(--primary-color);
+}
+
+/* Card header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.countdown-card h3 {
+    color: var(--white);
+    margin: 0;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+}
+
+/* Card body */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.card-date .date {
+    color: var(--grayish-blue);
+    font-size: 14px;
+}
+
+.card-date .time {
+    color: var(--grayish-blue);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* Time left indicator */
+.countdown-card .time-left {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.countdown-card .time-left.expired {
+    color: #888;
+}
+
+.countdown-card .time-left.ending-soon {
+    color: var(--primary-color);
+    animation: pulse 2s infinite;
+}
+
+/* Theme indicator */
+.theme-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.beach-indicator {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.space-indicator {
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+}
+
+.forest-indicator {
+    background: linear-gradient(135deg, #134e5e, #71b280);
+}
+
+.city-indicator {
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+}
+
+/* Card actions */
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+    border-top: 1px solid hsla(237, 18%, 59%, 0.1);
+    padding-top: 10px;
+}
+
+.card-btn {
+    background: none;
+    border: none;
+    color: var(--grayish-blue);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.card-btn:hover {
+    color: var(--primary-color);
+    background-color: hsla(237, 18%, 59%, 0.1);
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    #input-section {
+        padding: 30px;
+        width: 90%;
+        max-width: 450px;
+    }
+
+    .page-title {
+        font-size: 26px;
+    }
+
+    .countdown-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .bg-option {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-btn {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #input-section {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .page-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .countdown-list {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    input, select {
+        font-size: 16px;
+        padding: 12px 10px;
+    }
+
+    .countdown-card {
+        padding: 12px;
+    }
+
+    .countdown-card h3 {
+        font-size: 16px;
+    }
+
+    .card-btn {
+        padding: 10px;
+        margin: -5px;
+    }
+
+    .card-actions {
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+
+    #history-section {
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+}
